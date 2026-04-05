@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>전기산업기사 필기 올인원 학습실</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Industrial Engineer Electricity</p>
+        <h1>전기산업기사 필기<br>올인원 학습실</h1>
+        <p class="intro">
+          책 없이도 시작할 수 있게 시험 구조, 과목 요약, 핵심 공식, 객관식 문제, 풀이를 한 화면에 모았습니다.
+          이 사이트만으로 기본기와 반복 연습까지 이어갈 수 있게 구성했습니다.
+        </p>
+      </div>
+      <div class="hero-grid">
+        <article class="hero-card">
+          <span class="hero-label">과목</span>
+          <strong>5과목</strong>
+          <p>회로이론, 전기자기학, 전력공학, 전기기기, 설비기준</p>
+        </article>
+        <article class="hero-card">
+          <span class="hero-label">문제 수</span>
+          <strong id="questionCountText">30문제</strong>
+          <p>과목별 계산형과 개념형 혼합</p>
+        </article>
+        <article class="hero-card">
+          <span class="hero-label">학습 흐름</span>
+          <strong>요약 -> 공식 -> 문제</strong>
+          <p>암기보다 문제 연결 속도에 초점</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Start Here</p>
+          <h2>시험 구조와 합격 전략</h2>
+        </div>
+      </div>
+      <div class="overview-grid">
+        <article class="info-card">
+          <h3>필기 구조</h3>
+          <ul class="flat-list">
+            <li>전기자기학</li>
+            <li>전력공학</li>
+            <li>전기기기</li>
+            <li>회로이론</li>
+            <li>전기설비기술기준</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>합격선</h3>
+          <ul class="flat-list">
+            <li>과목당 40점 이상</li>
+            <li>전과목 평균 60점 이상</li>
+            <li>고득점보다 과락 방지가 우선</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>공부 순서</h3>
+          <ul class="flat-list">
+            <li>회로이론으로 계산 감각 확보</li>
+            <li>전기자기학과 전력공학 연결</li>
+            <li>전기기기와 설비기준으로 점수 보강</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Subject Notes</p>
+          <h2>과목별 핵심 요약</h2>
+        </div>
+      </div>
+      <div class="notes-grid" id="notesGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Easy Mode</p>
+          <h2>완전 쉽게 이해하는 핵심 개념</h2>
+          <p class="section-copy">처음 공부하는 기준으로 전압, 전류, 저항 같은 말을 일상적인 비유로 먼저 설명합니다.</p>
+        </div>
+      </div>
+      <div class="notes-grid" id="easyGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Formula Board</p>
+          <h2>핵심 공식 암기장</h2>
+        </div>
+      </div>
+      <div class="formula-grid" id="formulaGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Math First</p>
+          <h2>수포자용 전기 계산 기초</h2>
+          <p class="section-copy">전기 문제를 풀 때 필요한 최소 수학만 골라서 넣었습니다. 공식을 외우기 전에 숫자를 다루는 법부터 익히면 됩니다.</p>
+        </div>
+      </div>
+      <div class="formula-grid" id="mathGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">7 Day Course</p>
+          <h2>7일 필기 합격 코스</h2>
+          <p class="section-copy">책이 없다는 전제로, 이 사이트만 반복해서 돌릴 때의 최소 코스입니다.</p>
+        </div>
+      </div>
+      <div class="checklist" id="planGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Progress Lab</p>
+          <h2>학습 체크와 약점 분석</h2>
+          <p class="section-copy">하루 공부 체크와 자주 틀리는 과목을 같이 보면서 반복 순서를 정합니다.</p>
+        </div>
+      </div>
+      <div class="overview-grid">
+        <article class="info-card">
+          <h3>7일 체크</h3>
+          <div class="day-checks" id="dayChecks"></div>
+        </article>
+        <article class="info-card">
+          <h3>약점 과목</h3>
+          <div class="weakness-list" id="weaknessList"></div>
+        </article>
+        <article class="info-card">
+          <h3>반복 규칙</h3>
+          <ul class="flat-list">
+            <li>오답 수가 많은 과목부터 다시 푼다.</li>
+            <li>70점 미만 과목은 그날 한 번 더 돌린다.</li>
+            <li>계산형 오답은 숫자만 바꿔 다시 푼다.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Quiz Room</p>
+          <h2>객관식 문제 풀이</h2>
+          <p class="section-copy">과목을 골라서 퀴즈를 돌리고, 바로 해설을 확인하세요.</p>
+        </div>
+        <div class="quiz-stats">
+          <div class="stat-card">
+            <span class="stat-label">선택 과목</span>
+            <strong id="modeText">전체</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">진행</span>
+            <strong id="progressText">1 / 30</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">점수</span>
+            <strong id="scoreText">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">오답 수</span>
+            <strong id="wrongCountText">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="filters" id="filterButtons"></div>
+
+      <div class="quiz-shell">
+        <div class="quiz-top">
+          <span class="pill" id="categoryText">회로이론</span>
+          <span class="pill subtle" id="typeText">계산형</span>
+        </div>
+
+        <article class="question-card">
+          <h3 id="questionText"></h3>
+          <div class="choices" id="choices"></div>
+        </article>
+
+        <section class="result-card hidden" id="resultCard">
+          <p class="result-line" id="resultText"></p>
+          <p class="solution-title">초보자 설명</p>
+          <div class="solution-body" id="easyExplanationText"></div>
+          <p class="solution-title">풀이 방법</p>
+          <div class="solution-body" id="explanationText"></div>
+        </section>
+
+        <div class="actions">
+          <button id="checkButton" class="button primary">정답 확인</button>
+          <button id="nextButton" class="button secondary hidden">다음 문제</button>
+          <button id="restartButton" class="button ghost">현재 과목 처음부터</button>
+          <button id="wrongModeButton" class="button ghost">오답만 다시 풀기</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Checklist</p>
+          <h2>이 사이트로 공부하는 순서</h2>
+        </div>
+      </div>
+      <div class="checklist">
+        <article class="check-card">
+          <strong>1단계</strong>
+          <p>과목별 핵심 요약을 읽고 용어를 먼저 익힌다.</p>
+        </article>
+        <article class="check-card">
+          <strong>2단계</strong>
+          <p>공식 암기장에서 식을 눈으로 외운 뒤 직접 써본다.</p>
+        </article>
+        <article class="check-card">
+          <strong>3단계</strong>
+          <p>전체 퀴즈를 1회 돌리고 틀린 유형을 체크한다.</p>
+        </article>
+        <article class="check-card">
+          <strong>4단계</strong>
+          <p>약한 과목만 골라 다시 풀어 점수 안정권을 만든다.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <template id="choiceTemplate">
+    <label class="choice">
+      <input type="radio" name="answer">
+      <span class="choice-text"></span>
+    </label>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
