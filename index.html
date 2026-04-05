@@ -76,6 +76,17 @@
     <section class="panel">
       <div class="section-head">
         <div>
+          <p class="section-kicker">Pass Mode</p>
+          <h2>합격 우선 모드</h2>
+          <p class="section-copy">많이 아는 것보다 합격선 넘기는 것이 우선입니다. 과락 방지와 점수 회수 과목부터 잡습니다.</p>
+        </div>
+      </div>
+      <div class="overview-grid" id="passGrid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
           <p class="section-kicker">Subject Notes</p>
           <h2>과목별 핵심 요약</h2>
         </div>
@@ -182,6 +193,7 @@
       </div>
 
       <div class="filters" id="filterButtons"></div>
+      <div class="filters" id="modeButtons"></div>
 
       <div class="quiz-shell">
         <div class="quiz-top">
@@ -207,8 +219,20 @@
           <button id="nextButton" class="button secondary hidden">다음 문제</button>
           <button id="restartButton" class="button ghost">현재 과목 처음부터</button>
           <button id="wrongModeButton" class="button ghost">오답만 다시 풀기</button>
+          <button id="essentialModeButton" class="button ghost">합격 필수만 풀기</button>
         </div>
       </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Practical Next</p>
+          <h2>실기까지 연결하는 법</h2>
+          <p class="section-copy">필기에서 잡은 개념을 실기 답안 감각으로 이어갈 수 있게 핵심 연결만 정리했습니다.</p>
+        </div>
+      </div>
+      <div class="notes-grid" id="practicalGrid"></div>
     </section>
 
     <section class="panel">
